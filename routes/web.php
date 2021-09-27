@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'App\Http\Controllers\GalleryController@index');
+Route::resource('gallery','App\Http\Controllers\GalleryController');
+Route::resource('photos','App\Http\Controllers\PhotoController');
+Route::get('/gallery/show/{id}', 'App\Http\Controllers\GalleryController@show');
