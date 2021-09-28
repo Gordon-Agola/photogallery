@@ -8,12 +8,14 @@ class GalleryController extends Controller
 {
     //gallery list
     public function index(){
-        die("GALLERY/INDEX");
+        $test = 'TESTING';
+        //Render view
+        return view('gallery/index',compact('test'));
     }
 
     // show create form
     public function create(){
-        die("Gallery/Create");
+        return view('gallery/create');
     }
 
     // gallery store
